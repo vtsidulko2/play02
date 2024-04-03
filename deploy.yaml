@@ -1,23 +1,23 @@
 kind: Deployment
-apiVersion: apps/v1
+apiVersion: apps/v2
 metadata:
-  name: my-java-springboot
+  name: play02
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: java-springboot-app
+      app: play02
   template:
     metadata:
       labels:
-        app: java-springboot-app
+        app: play02
     spec:
       containers:
         - name: my-java-springboot
           image: java-springboot-image:latest
           ports:
             - name: http
-              containerPort: 8081
+              containerPort: 8082
               protocol: TCP
           resources:
             requests:
@@ -35,4 +35,4 @@ spec:
       protocol: TCP
       targetPort: 8081
   selector:
-    app: java-springboot-app
+    app: play02

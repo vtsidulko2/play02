@@ -12,15 +12,11 @@ public class DemoApplication {
 
     @RequestMapping("/")
     String home() {
-        System.out.println("home01");
-
-        return "mes01";
+        return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println("start01");
         SpringApplication.run(DemoApplication.class, args);
-        System.out.println("end01");
     }
 
 }
